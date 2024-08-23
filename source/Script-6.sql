@@ -3,15 +3,13 @@ default character set = 'utf8mb4' collate = 'utf8mb4_0900_ai_ci';
 
 use mybatis_proj_db;
 
-# users 테이블 생성
-create table users_tbl (
-	id int auto_increment primary key comment '사용자 번호',
-	name varchar(50) not null comment '사용자 이름',
-	email varchar(100) unique not null comment '사용자 이메일',
-	created_at datetime default current_timestamp comment '사용자 가입날짜',
-	deleted_at char(1) default 'n' not null comment '사용자 탈퇴 여부'
-);
--- deleted_at -> is_deleted
+-- create table users_tbl (
+-- 	id int auto_increment primary key comment '사용자 번호',
+-- 	name varchar(50) not null comment '사용자 이름',
+-- 	email varchar(100) unique not null comment '사용자 이메일',
+-- 	created_at datetime default current_timestamp comment '사용자 가입날짜',
+-- 	deleted_at char(1) default 'n' not null comment '사용자 탈퇴 여부'
+-- );
 
 # coffee 테이블 생성
 create table coffee_tbl (
